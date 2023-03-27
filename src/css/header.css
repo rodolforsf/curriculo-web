@@ -1,0 +1,73 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* font-family: ; */
+}
+
+.foto {
+    border-radius: 50%;
+    height: 200px;
+    margin: auto;
+    width: 200px;
+}
+
+/* .header-info{ */
+    /* margin: auto; */
+    /* text-align: center; */
+/* } */
+.personal {
+    display: flex;
+    flex-direction: column;
+}
+.header-title{
+    font-family: 'Neue Machine';
+    font-weight: 700;
+    text-align: center; 
+    
+
+}
+
+.header-info{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Neue Machine';
+    font-weight: 400;
+    line-height: .3rem;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: right;
+    width: 100%;
+    margin: .3rem;
+    margin-left: 1.5rem;
+    /* background-color: aliceblue; */
+}
+
+@media only screen and (min-width: 768px){
+    .header {
+        display: grid;
+        grid-template-areas: 
+            "photo title"
+            "photo info"
+        ;
+    }
+
+    .header .foto{
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .header .header-title{
+        grid-area: title;
+        text-align: start;
+        max-width: 300px;
+        margin-left: 5rem;
+    }
+    .header .header-info{
+        grid-area: info;
+        margin-left: 5rem;
+        line-height: .1rem;
+    }
+}
+
+
